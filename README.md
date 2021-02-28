@@ -5,13 +5,10 @@ A wrapper for [comm-api](https://api.fc5570.ml), an api I made because the APIs 
 ## Installation
 
 NPM -
-
 ```
 npm i comm-api.js
 ```
-
 Yarn -
-
 ```
 yarn add comm-api.js
 ```
@@ -78,6 +75,6 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 
 ### All the functions return a promise, resolve the promise by either awaiting it or using .then()
 
-### All the Image Manipulation endpoints (except woah) require an image thats either a png, jpg or a gif. A .webp doesn't work. The endpoints return a buffer.
+### All the Image Manipulation endpoints (except woah and alwaysHasBeen) require an image thats either a png, jpg or a gif. A webp doesn't work. The endpoints return a buffer.
 
 ### Made by FC#5104 on Discord. [Click Here](https://discord.gg/yuKfuCg7Zx) to join the Support Server of the API. [Click Here](https://docs.fc5570.ml) for the documentation of the API. Any suggestions are welcome.
