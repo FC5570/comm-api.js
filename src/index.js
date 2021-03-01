@@ -3,7 +3,7 @@ const baseURL = "https://api.fc5570.ml";
 const types = ["encode", "decode"];
 
 class APIWrapperClient {
-  constructor() {}
+  constructor() { }
 
   /**
    * The function to make requests to the api
@@ -95,6 +95,20 @@ class APIWrapperClient {
   }
 
   /**
+   * morse endpoint
+   * @param type: whether to encode or decode text to or from morse
+   * @param text: the text to encode or decode
+   */
+  async morse(type, text) {
+    if (!types.join("").toLowerCase().includes(type.toLowerCase()))
+      throw new Error(
+        "An error occured with the base64 endpoint: type can only be encode or decode."
+      );
+    const req = await this.request("type", `type=${type}&text=${text}`);
+    return req.json();
+  }
+
+  /**
    * Image Manipulation endpoints -
    */
 
@@ -133,7 +147,7 @@ class APIWrapperClient {
    * @returns
    */
   async slap(image1, image2) {
-    const req = await this.request("/slap",`image1=${image1}&image2=${image2}`)
+    const req = await this.request("/slap", `image1=${image1}&image2=${image2}`)
     return req.buffer();
   }
 
@@ -255,6 +269,14 @@ class APIWrapperClient {
   }
 
   /**
+   * doesnotexist endpoint
+  */
+  async doesnotexist() {
+    const req = await fetch(`${baseURL}/doesnotexist`)
+    return req.buffer();
+  }
+
+  /**
    * GIF Endpoints -
    */
 
@@ -263,7 +285,7 @@ class APIWrapperClient {
    * @param type: The type of the gif to provide, available types: hug, pat, blush, slap, stare, trigger.
    */
   async gif(type) {
-    if(!type) throw new Error('An error occured with the gif endpoint - A type must be specified')
+    if (!type) throw new Error('An error occured with the gif endpoint - A type must be specified')
     const gifTypes = ["hug", "pat", "blush", "slap", "stare", "trigger"];
     if (!gifTypes.join("").toLowerCase().includes(type.toLowerCase()))
       throw new Error(
