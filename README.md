@@ -5,10 +5,13 @@ A wrapper for [comm-api](https://api.fc5570.ml), an api I made because the APIs 
 ## Installation
 
 NPM -
+
 ```
 npm i comm-api.js
 ```
+
 Yarn -
+
 ```
 yarn add comm-api.js
 ```

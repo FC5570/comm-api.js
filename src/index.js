@@ -1,9 +1,9 @@
-const fetch = require("node-fetch")
+const fetch = require("node-fetch");
 const baseURL = "https://api.fc5570.ml";
 const types = ["encode", "decode"];
 
 class APIWrapperClient {
-  constructor() { }
+  constructor() {}
 
   /**
    * The function to make requests to the api
@@ -13,7 +13,7 @@ class APIWrapperClient {
   async request(endpoint, parameters) {
     const data = await fetch(`${baseURL}/${endpoint}?${parameters}`);
     if (data.status !== 200) {
-      const msg = await data.json()
+      const msg = await data.json();
       throw new Error(
         `An error occured with the ${endpoint} endpoint: ${msg.message} (code: ${msg.code})`
       );
@@ -118,7 +118,7 @@ class APIWrapperClient {
    */
   async ad(image) {
     const req = await this.request("ad", `image=${image}`);
-    return req.buffer()
+    return req.buffer();
   }
 
   /**
@@ -127,8 +127,10 @@ class APIWrapperClient {
    * @param text2: Text to put over the astronaut pointing a gun towards the first one.
    */
   async alwaysHasBeen(text1, text2) {
-    const req = await this.request(`${baseURL}/alwaysHasBeeb?text1=${text1}&text2=${text2}`);
-    return req.buffer()
+    const req = await this.request(
+      `${baseURL}/alwaysHasBeeb?text1=${text1}&text2=${text2}`
+    );
+    return req.buffer();
   }
 
   /**
@@ -137,7 +139,7 @@ class APIWrapperClient {
    */
   async greyscale(image) {
     const req = await this.request(`${baseURL}/greyscale?image=${image}`);
-    return req.buffer()
+    return req.buffer();
   }
 
   /**
@@ -147,7 +149,10 @@ class APIWrapperClient {
    * @returns
    */
   async slap(image1, image2) {
-    const req = await this.request("/slap", `image1=${image1}&image2=${image2}`)
+    const req = await this.request(
+      "/slap",
+      `image1=${image1}&image2=${image2}`
+    );
     return req.buffer();
   }
 
@@ -157,7 +162,7 @@ class APIWrapperClient {
    */
   async woah(text) {
     const req = await this.request("woah", `text=${text}`);
-    return req.buffer()
+    return req.buffer();
   }
 
   /**
@@ -204,7 +209,7 @@ class APIWrapperClient {
    * joke endpoint
    */
   async joke() {
-    const req = await fetch(`${baseURL}/joke`)
+    const req = await fetch(`${baseURL}/joke`);
     return req.json();
   }
 
@@ -239,7 +244,7 @@ class APIWrapperClient {
    * quote endpoint
    */
   async quote() {
-    const req = await fetch(`${baseURL}/quote`)
+    const req = await fetch(`${baseURL}/quote`);
     return req.json();
   }
 
@@ -256,7 +261,7 @@ class APIWrapperClient {
    * timezones endpoint
    */
   async timezones() {
-    const req = await fetch(`${baseURL}/timezones`)
+    const req = await fetch(`${baseURL}/timezones`);
     return req.json();
   }
 
@@ -264,15 +269,15 @@ class APIWrapperClient {
    * word endpoint
    */
   async word() {
-    const req = await fetch(`${baseURL}/word`)
+    const req = await fetch(`${baseURL}/word`);
     return req.json();
   }
 
   /**
    * doesnotexist endpoint
-  */
+   */
   async doesnotexist() {
-    const req = await fetch(`${baseURL}/doesnotexist`)
+    const req = await fetch(`${baseURL}/doesnotexist`);
     return req.buffer();
   }
 
@@ -285,7 +290,10 @@ class APIWrapperClient {
    * @param type: The type of the gif to provide, available types: hug, pat, blush, slap, stare, trigger.
    */
   async gif(type) {
-    if (!type) throw new Error('An error occured with the gif endpoint - A type must be specified')
+    if (!type)
+      throw new Error(
+        "An error occured with the gif endpoint - A type must be specified"
+      );
     const gifTypes = ["hug", "pat", "blush", "slap", "stare", "trigger"];
     if (!gifTypes.join("").toLowerCase().includes(type.toLowerCase()))
       throw new Error(
