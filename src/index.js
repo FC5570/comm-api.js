@@ -3,7 +3,7 @@ const baseURL = "https://api.fc5570.ml";
 const types = ["encode", "decode"];
 
 class APIWrapperClient {
-  constructor() {}
+  constructor() { }
 
   /**
    * The function to make requests to the api
@@ -128,17 +128,24 @@ class APIWrapperClient {
    */
   async alwaysHasBeen(text1, text2) {
     const req = await this.request(
-      `${baseURL}/alwaysHasBeeb?text1=${text1}&text2=${text2}`
+      `/alwaysHasBeen`, `text1=${text1}&text2=${text2}`
     );
     return req.buffer();
   }
 
   /**
+   * 
+   */
+  async captcha(text) {
+    const req = await this.request(`/captcha`, `text=${text}`)
+    return req.buffer()
+  }
+  /**
    * greyscale endpoint
    * @param image: the image to apply the grey filter on
    */
   async greyscale(image) {
-    const req = await this.request(`${baseURL}/greyscale?image=${image}`);
+    const req = await this.request(`/greyscale`, `image=${image}`);
     return req.buffer();
   }
 
