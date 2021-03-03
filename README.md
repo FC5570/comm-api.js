@@ -85,8 +85,6 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 | --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
 | `gif()`   | type               | Gives a random gif of the specified type, available types: hug, pat, blush, slap, stare, trigger. |
 
-### All the functions return a promise, resolve the promise by either awaiting it or using .then()
+#### All the functions return a promise, resolve the promise by either awaiting it or using .then(). All the Image Manipulation endpoints (except woah and alwaysHasBeen) require an image thats either a png, jpg or a gif. A webp doesn't work. The endpoints return a buffer.
 
-### All the Image Manipulation endpoints (except woah and alwaysHasBeen) require an image thats either a png, jpg or a gif. A webp doesn't work. The endpoints return a buffer.
-
-### Made by FC#5104 on Discord. [Click Here](https://discord.gg/yuKfuCg7Zx) to join the Support Server of the API. [Click Here](https://docs.fc5570.ml) for the documentation of the API. Any suggestions are welcome.
+#### Made by FC#5104 on Discord. [Click Here](https://discord.gg/yuKfuCg7Zx) to join the Support Server of the API. [Click Here](https://docs.fc5570.ml) for the documentation of the API. Any suggestions are welcome.
