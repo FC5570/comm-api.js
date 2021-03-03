@@ -48,6 +48,7 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 | `zalgo()`     | type (encode/decode), text | Converts text to some weird and glitchy text.                              |
 | `binary()`    | type (encode/decode), text | Converts text to and from binary.                                          |
 | `base64()`    | type (encode/decode), text | Converts text to and from base64.                                          |
+| `morse()` | type (encode/decode), text | Converts text to and from morse.
 
 #### Image Manipulation:
 

@@ -3,7 +3,7 @@ const baseURL = "https://api.fc5570.ml";
 const types = ["encode", "decode"];
 
 class APIWrapperClient {
-  constructor() {}
+  constructor() { }
 
   /**
    * The function to make requests to the api
@@ -246,6 +246,18 @@ class APIWrapperClient {
   async password(length) {
     const req = await this.request("password", `length=${length}`);
     return req.json();
+  }
+
+  /**
+   * postToWebhook endpoint, sends a message to a discord webhook
+   * @param webhookURL: the url of the webhook
+   * @param username: the username of the webhook (optional)
+   * @param avatarURL: the avatarURL of the webhook (optional)
+   * @param message: the message to post to the webhook.
+   */
+  async postToWebhook(webhookURL, username, avatarURL, message) {
+    const req = this.request('postToWebhook', `webhookURL=${webhookURL}&${username ? username : null}&${avatarURL ? avatarURL : null}&${message}`)
+    return req.json()
   }
 
   /**
