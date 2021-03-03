@@ -48,7 +48,7 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 | `zalgo()`     | type (encode/decode), text | Converts text to some weird and glitchy text.                              |
 | `binary()`    | type (encode/decode), text | Converts text to and from binary.                                          |
 | `base64()`    | type (encode/decode), text | Converts text to and from base64.                                          |
-| `morse()` | type (encode/decode), text | Converts text to and from morse.
+| `morse()`     | type (encode/decode), text | Converts text to and from morse.                                           |
 
 #### Image Manipulation:
 
@@ -56,6 +56,7 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 | ----------------- | ------------------ | ---------------------------------------------------------------------------------- |
 | `ad()`            | image              | Puts the provided image on an advertisement board.                                 |
 | `alwaysHasBeen()` | text1, text2       | Puts the provided text on an always has been meme.                                 |
+| `captcha()`       | text               | Puts the provided text on a reCaptcha.                                             |
 | `greyscale()`     | image              | Applies the greyscale filter on the provided image.                                |
 | `slap()`          | image1, image2     | Slap someone, image1 is the person slapping, image2 is the person getting slapped. |
 | `woah()`          | text               | Puts the provided text on a "woah! thats worthless" meme.                          |
@@ -63,19 +64,26 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 
 #### Others:
 
-| Functions         | Required Paramters | Description                                         |
-| ----------------- | ------------------ | --------------------------------------------------- |
-| `ascii()`         | text               | Converts text to ascii.                             |
-| `chatbot()`       | text               | Something that talks to you like a human.           |
-| `ipLookup()`      | ip                 | The IP or the host name to get info about.          |
-| `joke()`          | none               | Provides a joke.                                    |
-| `mcServerStats()` | server             | Gets info about a certain minecraft server.         |
-| `mcUserStats()`   | username           | Gets info of a certain minecraft player.            |
-| `password()`      | length             | Generates a random password of the provided length. |
-| `quote()`         | none               | Generates a random quote.                           |
-| `time()`          | timezone           | Gets the time of a certain timezone.                |
-| `timezones()`     | none               | Provides an array of all the timezones.             |
-| `word()`          | none               | Generates a random word.                            |
+| Functions         | Required Paramters                                             | Description                                                                       |
+| ----------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `ascii()`         | text                                                           | Converts text to ascii.                                                           |
+| `chatbot()`       | text                                                           | Something that talks to you like a human.                                         |
+| `ipLookup()`      | ip                                                             | The IP or the host name to get info about.                                        |
+| `joke()`          | none                                                           | Provides a joke.                                                                  |
+| `mcServerStats()` | server                                                         | Gets info about a certain minecraft server.                                       |
+| `mcUserStats()`   | username                                                       | Gets info of a certain minecraft player.                                          |
+| `password()`      | length                                                         | Generates a random password of the provided length.                               |
+| `postToWebhook()` | webhookURL, username (optional), avatarURL (optional), message | Posts a message to the provided Discord Webhook URL. Webhook URLs are not stored. |
+| `quote()`         | none                                                           | Generates a random quote.                                                         |
+| `time()`          | timezone                                                       | Gets the time of a certain timezone.                                              |
+| `timezones()`     | none                                                           | Provides an array of all the timezones.                                           |
+| `word()`          | none                                                           | Generates a random word.                                                          |
+
+### GIFs
+
+| Functions | Required Paramters | Description                                                                                       |
+| --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| `gif()`   | type               | Gives a random gif of the specified type, available types: hug, pat, blush, slap, stare, trigger. |
 
 ### All the functions return a promise, resolve the promise by either awaiting it or using .then()
 

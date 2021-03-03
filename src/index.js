@@ -3,7 +3,7 @@ const baseURL = "https://api.fc5570.ml";
 const types = ["encode", "decode"];
 
 class APIWrapperClient {
-  constructor() { }
+  constructor() {}
 
   /**
    * The function to make requests to the api
@@ -205,6 +205,14 @@ class APIWrapperClient {
   }
 
   /**
+   * doesnotexist endpoint
+   */
+  async doesnotexist() {
+    const req = await fetch(`${baseURL}/doesnotexist`);
+    return req.buffer();
+  }
+
+  /**
    * ipLookup endpoint
    * @param ip: the ip or the host name to get info about
    */
@@ -256,8 +264,13 @@ class APIWrapperClient {
    * @param message: the message to post to the webhook.
    */
   async postToWebhook(webhookURL, username, avatarURL, message) {
-    const req = this.request('postToWebhook', `webhookURL=${webhookURL}&${username ? username : null}&${avatarURL ? avatarURL : null}&${message}`)
-    return req.json()
+    const req = this.request(
+      "postToWebhook",
+      `webhookURL=${webhookURL}&${username ? username : null}&${
+        avatarURL ? avatarURL : null
+      }&${message}`
+    );
+    return req.json();
   }
 
   /**
@@ -291,14 +304,6 @@ class APIWrapperClient {
   async word() {
     const req = await fetch(`${baseURL}/word`);
     return req.json();
-  }
-
-  /**
-   * doesnotexist endpoint
-   */
-  async doesnotexist() {
-    const req = await fetch(`${baseURL}/doesnotexist`);
-    return req.buffer();
   }
 
   /**
