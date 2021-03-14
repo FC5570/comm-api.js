@@ -38,17 +38,18 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 
 ### List of all the functions:
 
-#### Text Manipulation:
+### Animals
 
-| Functions     | Required Paramters         | Description                                                                |
-| ------------- | -------------------------- | -------------------------------------------------------------------------- |
-| `sarcastic()` | text                       | Turns text to SaRCAStIC text.                                              |
-| `owofy()`     | text                       | Converts text to some kind of text some kind of people use, hello -> hewwo |
-| `reverse()`   | text                       | Reverses text.                                                             |
-| `zalgo()`     | type (encode/decode), text | Converts text to some weird and glitchy text.                              |
-| `binary()`    | type (encode/decode), text | Converts text to and from binary.                                          |
-| `base64()`    | type (encode/decode), text | Converts text to and from base64.                                          |
-| `morse()`     | type (encode/decode), text | Converts text to and from morse.                                           |
+| Functions | Required Parameters | Description                           |
+| --------- | ------------------- | ------------------------------------- |
+| `cat()`   | none                | Provides random cat facts and images. |
+| `dog()`   | none                | Provides randomg dog images.          |
+
+### GIFs
+
+| Functions | Required Paramters | Description                                                                                       |
+| --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
+| `gif()`   | type               | Gives a random gif of the specified type, available types: hug, pat, blush, slap, stare, trigger. |
 
 #### Image Manipulation:
 
@@ -68,22 +69,36 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 | ----------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | `ascii()`         | text                                                           | Converts text to ascii.                                                           |
 | `chatbot()`       | text                                                           | Something that talks to you like a human.                                         |
+| `countryFlag()`   | country                                                        | Provides the flag of the provided country.                                        |
+| `doesnotexist()`  | none                                                           | Provides images of people who dont exist.                                         |
+| `emojiInfo`       | emoji                                                          | Gets info about an emoji.                                                         |
+| `insult()`        | none                                                           | Provides random insult.                                                           |
 | `ipLookup()`      | ip                                                             | The IP or the host name to get info about.                                        |
 | `joke()`          | none                                                           | Provides a joke.                                                                  |
 | `mcServerStats()` | server                                                         | Gets info about a certain minecraft server.                                       |
 | `mcUserStats()`   | username                                                       | Gets info of a certain minecraft player.                                          |
+| `meme()`          | none                                                           | Provides random memes.                                                            |
+| `number()`        | none                                                           | Generates random numbers.                                                         |
 | `password()`      | length                                                         | Generates a random password of the provided length.                               |
 | `postToWebhook()` | webhookURL, username (optional), avatarURL (optional), message | Posts a message to the provided Discord Webhook URL. Webhook URLs are not stored. |
 | `quote()`         | none                                                           | Generates a random quote.                                                         |
 | `time()`          | timezone                                                       | Gets the time of a certain timezone.                                              |
 | `timezones()`     | none                                                           | Provides an array of all the timezones.                                           |
+| `translate()`     | to, text                                                       | Translates the given text to the given language, defaults to english.             |
 | `word()`          | none                                                           | Generates a random word.                                                          |
 
-### GIFs
+#### Text Manipulation:
 
-| Functions | Required Paramters | Description                                                                                       |
-| --------- | ------------------ | ------------------------------------------------------------------------------------------------- |
-| `gif()`   | type               | Gives a random gif of the specified type, available types: hug, pat, blush, slap, stare, trigger. |
+| Functions     | Required Paramters         | Description                                                                |
+| ------------- | -------------------------- | -------------------------------------------------------------------------- |
+| `base64()`    | type (encode/decode), text | Converts text to and from base64.                                          |
+| `binary()`    | type (encode/decode), text | Converts text to and from binary.                                          |
+| `morse()`     | type (encode/decode), text | Converts text to and from morse.                                           |
+| `owofy()`     | text                       | Converts text to some kind of text some kind of people use, hello -> hewwo |
+| `reverse()`   | text                       | Reverses text.                                                             |
+| `sarcastic()` | text                       | Turns text to SaRCAStIC text.                                              |
+| `shuffle()`   | text                       | Shuffles the given text.                                                   |
+| `zalgo()`     | type (encode/decode), text | Converts text to some weird and glitchy text.                              |
 
 #### All the functions return a promise, resolve the promise by either awaiting it or using .then(). All the Image Manipulation endpoints (except woah and alwaysHasBeen) require an image thats either a png, jpg or a gif. A webp doesn't work. The endpoints return a buffer.
 
