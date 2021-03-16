@@ -91,6 +91,15 @@ module.exports = {
   },
 
   /**
+   * delete endoiint
+   * @param image: The image to delete
+   */
+  async delete(image) {
+    const data = await this.request("delete", `image=${image}`);
+    return data.buffer();
+  },
+
+  /**
    * greyscale endpoint
    * @param image: The image to apply the greyscale filter on.
    */

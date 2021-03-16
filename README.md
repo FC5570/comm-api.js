@@ -58,6 +58,7 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 | `ad()`            | image              | Puts the provided image on an advertisement board.                                 |
 | `alwaysHasBeen()` | text1, text2       | Puts the provided text on an always has been meme.                                 |
 | `captcha()`       | text               | Puts the provided text on a reCaptcha.                                             |
+| `delete()`        | image              | Deletes a given image.                                                             |
 | `greyscale()`     | image              | Applies the greyscale filter on the provided image.                                |
 | `slap()`          | image1, image2     | Slap someone, image1 is the person slapping, image2 is the person getting slapped. |
 | `woah()`          | text               | Puts the provided text on a "woah! thats worthless" meme.                          |
