@@ -6,6 +6,7 @@ module.exports = {
    * main request function
    * @param endpoint: the endpoint to make a request to.
    * @param params: the parameters of the endpoint
+   * @private
    */
 
   async request(endpoint, params) {
@@ -154,6 +155,30 @@ module.exports = {
   },
 
   /**
+   * calendar endpoint
+   * @param month: The month to generate a calendar of
+   * @param year: The year to generate a calendar of
+   * @param table: Whether to return a calendar in ascii or not.
+   */
+  async calendar(month, year, table) {
+    if (table) {
+      const data = await this.request(
+        "calendar",
+        `year=${parseInt(year)}&month=${parseInt(month)}&table=true`
+      );
+      const json = await data.json();
+      return json;
+    } else {
+      const data = await this.request(
+        "calendar",
+        `month=${parseInt(month)}&year=${parseInt(year)}`
+      );
+      const json = await data.json();
+      return json;
+    }
+  },
+
+  /**
    * chatbot endpoint
    * @param text: The text to send to the chatbot
    */
@@ -163,6 +188,15 @@ module.exports = {
     return json.response;
   },
 
+  /**
+   * country endpoint
+   * @param country: The country to get the info about.
+   */
+  async country(country) {
+    const data = await this.request("country", `country=${country}`);
+    const json = await data.json();
+    return json;
+  },
   /**
    * countryFlag endpoint
    * @param country: The country to get the flag of
@@ -317,6 +351,20 @@ module.exports = {
    */
   async translate(text, to) {
     const data = await this.request("translate", `text=${text}&to=${to}`);
+    const json = await data.json();
+    return json;
+  },
+
+  /**
+   * weather endpoint
+   * @param location: The location to get the weather of
+   * @param degreeType: The degree type of the weather, can be either C (Celsius) or F (Fahrenheit), defaults to C
+   */
+  async weather(location, degreeType) {
+    const data = await this.request(
+      "weather",
+      `location=${location}&degreeType=${degreeType}`
+    );
     const json = await data.json();
     return json;
   },
