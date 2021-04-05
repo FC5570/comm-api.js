@@ -1,37 +1,37 @@
 {
-  "name": "comm-api.js",
-  "version": "3.6.1",
-  "description": "A wrapper for my api (https://api.fc5570.ml)",
-  "main": "src/index.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/FC5570/comm-api.js.git"
-  },
-  "keywords": [
-    "comm-api",
-    "api",
-    "discord-bots",
-    "discord",
-    "api wrapper",
-    "bots",
-    "djs",
-    "js",
-    "javascript",
-    "discord.js"
-  ],
-  "author": "FC5570",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/FC5570/comm-api.js/issues"
-  },
-  "homepage": "https://github.com/FC5570/comm-api.js#readme",
-  "dependencies": {
-    "node-fetch": "^2.6.1"
-  }
+	"name": "comm-api.js",
+	"version": "3.6.1",
+	"description": "A wrapper for my api (https://api.fc5570.ml)",
+	"main": "src/index.js",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FC5570/comm-api.js.git"
+	},
+	"keywords": [
+		"comm-api",
+		"api",
+		"discord-bots",
+		"discord",
+		"api wrapper",
+		"bots",
+		"djs",
+		"js",
+		"javascript",
+		"discord.js"
+	],
+	"author": "FC5570",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/FC5570/comm-api.js/issues"
+	},
+	"homepage": "https://github.com/FC5570/comm-api.js#readme",
+	"dependencies": {
+		"node-fetch": "^2.6.1"
+	}
 }
