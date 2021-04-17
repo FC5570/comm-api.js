@@ -25,6 +25,15 @@ module.exports = {
 	 */
 
 	/**
+	 * bird endpoint
+	 */
+	async bird() {
+		const data = await this.request('bird');
+		const json = await data.json();
+		return json;
+	},
+
+	/**
 	 * cat endpoint
 	 */
 	async cat() {
@@ -38,6 +47,33 @@ module.exports = {
 	 */
 	async dog() {
 		const data = await this.request('dog');
+		const json = await data.json();
+		return json;
+	},
+
+	/**
+	 * duck endpoint
+	 */
+	async duck() {
+		const data = await this.request('duck');
+		const json = await data.json();
+		return json;
+	},
+
+	/**
+	 * monkey endpoint
+	 */
+	async monkey() {
+		const data = await this.request('monkey');
+		const json = await data.json();
+		return json;
+	},
+
+	/**
+	 * squirrel endpoint
+	 */
+	async squirrel() {
+		const data = await this.request('squirrel');
 		const json = await data.json();
 		return json;
 	},
@@ -204,6 +240,20 @@ module.exports = {
 	async countryFlag(country) {
 		const data = await this.request('countryFlag', `country=${country}`);
 		return data.buffer();
+	},
+
+	/**
+	 * covid19 endpoint
+	 * @param country: The country to get the stats of
+	 * @param all: Whether to get global covid19 stats (must be true if yes)
+	 */
+	async covid19(country, all) {
+		const data = await this.request(
+			'covid19',
+			`${all ? `all=true` : `country=${encodeURIComponent(country)}`}`
+		);
+		const json = await data.json();
+		return json;
 	},
 
 	/**

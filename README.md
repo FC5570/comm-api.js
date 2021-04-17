@@ -40,10 +40,14 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 
 ### Animals
 
-| Functions | Required Parameters | Description                           |
-| --------- | ------------------- | ------------------------------------- |
-| `cat()`   | none                | Provides random cat facts and images. |
-| `dog()`   | none                | Provides randomg dog images.          |
+| Functions    | Required Parameters | Description                            |
+| ------------ | ------------------- | -------------------------------------- |
+| `bird()`     | none                | Returns random bird images (4k).       |
+| `cat()`      | none                | Provides random cat facts and images.  |
+| `dog()`      | none                | Provides randomg dog facts and images. |
+| `duck()`     | none                | Returns random duck images.            |
+| `monkey()`   | none                | Returns random monkey images (4k).     |
+| `squirrel()` | none                | Returns random squirrel images (4k).   |
 
 ### GIFs
 
@@ -73,6 +77,7 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 | `chatbot()`       | text                                                           | Something that talks to you like a human.                                                                                                                                        |
 | `country()`       | country                                                        | Returns the info about a country.                                                                                                                                                |
 | `countryFlag()`   | country                                                        | Provides the flag of the provided country.                                                                                                                                       |
+| `covid19`         | country, all (optional)                                        | Provides Covid19 stats of a country, an optional `all` param can be provided (must be true) to get global Covid19 stats.                                                         |
 | `doesnotexist()`  | none                                                           | Provides images of people who dont exist.                                                                                                                                        |
 | `emojiInfo`       | emoji                                                          | Gets info about an emoji.                                                                                                                                                        |
 | `insult()`        | none                                                           | Provides random insult.                                                                                                                                                          |
