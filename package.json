@@ -1,6 +1,6 @@
 {
   "name": "comm-api.js",
-  "version": "3.7.0",
+  "version": "3.7.1",
   "description": "A wrapper for my api (https://api.fc5570.ml)",
   "main": "src/index.js",
   "directories": {

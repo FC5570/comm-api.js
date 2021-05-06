@@ -22,18 +22,14 @@ yarn add comm-api.js
 
 ```
 const api = require('comm-api.js')
-const comm-api = new api()
-
-comm-api.joke().then(m => console.log(m))
+api.joke().then(m => console.log(m))
 ```
 
 #### Chatbot endpoint:
 
 ```
 const api = require('comm-api.js')
-const comm-api = new api()
-
-comm-api.chatbot('hey').then(m => console.log(m)) // hello!
+api.chatbot('hey').then(m => console.log(m)) // hello!
 ```
 
 ### List of all the functions:
