@@ -1,6 +1,6 @@
 # comm-api.js
 
-A wrapper for [comm-api](https://api.fc5570.ml), an api I made because the APIs my bot used had gone down.
+A wrapper for [my api](https://api.fc5570.ml).
 
 ## Installation
 
@@ -68,33 +68,41 @@ comm-api.chatbot('hey').then(m => console.log(m)) // hello!
 | `woah()`          | text               | Puts the provided text on a "woah! thats worthless" meme.                          |
 | `wasted()`        | image              | Applies the GTA5 Wasted overlay on the image.                                      |
 
+### Info:
+
+| Functions           | Required Parameters     | Description                                                                                                                                                                      |
+| ------------------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `calendar`          | month, year, table      | Returns the calendar of a specified month and year, an optional "table" parameter can be provided to get the calendar in Ascii format.                                           |
+| `country()`         | country                 | Returns the info about a country.                                                                                                                                                |
+| `countryFlag()`     | country                 | Provides the flag of the provided country.                                                                                                                                       |
+| `covid19`           | country, all (optional) | Provides Covid19 stats of a country, an optional `all` param can be provided (must be true) to get global Covid19 stats.                                                         |
+| `emojiInfo()`       | emoji                   | Provides info of an emoji (name or unicode can be provided)                                                                                                                      |
+| `fivemplayers()`    | ip                      | Shows all the players playing on a fivem server.                                                                                                                                 |
+| `fivemserverinfo()` | ip                      | Provides info of a fivem server                                                                                                                                                  |
+| `ipLookup()`        | ip                      | The IP or the host name to get info about.                                                                                                                                       |
+| `mcServerStats()`   | server                  | Gets info about a certain minecraft server.                                                                                                                                      |
+| `mcUserStats()`     | username                | Gets info of a certain minecraft player.                                                                                                                                         |
+| `time()`            | timezone                | Gets the time of a certain timezone.                                                                                                                                             |
+| `timezones()`       | none                    | Provides an array of all the timezones.                                                                                                                                          |
+| `weather()`         | location, degreeType    | Returns the weather of a specified location, an optinal "degreeType" parameter with the degree type of the weather can be provided, defaults to C, available degree types: C, F. |
+
 #### Others:
 
-| Functions         | Required Paramters                                             | Description                                                                                                                                                                      |
-| ----------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ascii()`         | text                                                           | Converts text to ascii.                                                                                                                                                          |
-| `calendar`        | month, year, table                                             | Returns the calendar of a specified month and year, an optional "table" parameter can be provided to get the calendar in Ascii format.                                           |
-| `chatbot()`       | text                                                           | Something that talks to you like a human.                                                                                                                                        |
-| `country()`       | country                                                        | Returns the info about a country.                                                                                                                                                |
-| `countryFlag()`   | country                                                        | Provides the flag of the provided country.                                                                                                                                       |
-| `covid19`         | country, all (optional)                                        | Provides Covid19 stats of a country, an optional `all` param can be provided (must be true) to get global Covid19 stats.                                                         |
-| `doesnotexist()`  | none                                                           | Provides images of people who dont exist.                                                                                                                                        |
-| `emojiInfo`       | emoji                                                          | Gets info about an emoji.                                                                                                                                                        |
-| `insult()`        | none                                                           | Provides random insult.                                                                                                                                                          |
-| `ipLookup()`      | ip                                                             | The IP or the host name to get info about.                                                                                                                                       |
-| `joke()`          | none                                                           | Provides a joke.                                                                                                                                                                 |
-| `mcServerStats()` | server                                                         | Gets info about a certain minecraft server.                                                                                                                                      |
-| `mcUserStats()`   | username                                                       | Gets info of a certain minecraft player.                                                                                                                                         |
-| `meme()`          | none                                                           | Provides random memes.                                                                                                                                                           |
-| `number()`        | none                                                           | Generates random numbers.                                                                                                                                                        |
-| `password()`      | length                                                         | Generates a random password of the provided length.                                                                                                                              |
-| `postToWebhook()` | webhookURL, username (optional), avatarURL (optional), message | Posts a message to the provided Discord Webhook URL. Webhook URLs are not stored.                                                                                                |
-| `quote()`         | none                                                           | Generates a random quote.                                                                                                                                                        |
-| `time()`          | timezone                                                       | Gets the time of a certain timezone.                                                                                                                                             |
-| `timezones()`     | none                                                           | Provides an array of all the timezones.                                                                                                                                          |
-| `translate()`     | to, text                                                       | Translates the given text to the given language, defaults to english.                                                                                                            |
-| `weather()`       | location, degreeType                                           | Returns the weather of a specified location, an optinal "degreeType" parameter with the degree type of the weather can be provided, defaults to C, available degree types: C, F. |
-| `word()`          | none                                                           | Generates a random word.                                                                                                                                                         |
+| Functions         | Required Paramters                                             | Description                                                                       |
+| ----------------- | -------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `ascii()`         | text                                                           | Converts text to ascii.                                                           |
+| `chatbot()`       | text                                                           | Something that talks to you like a human.                                         |
+| `doesnotexist()`  | none                                                           | Provides images of people who dont exist.                                         |
+| `emojiInfo`       | emoji                                                          | Gets info about an emoji.                                                         |
+| `insult()`        | none                                                           | Provides random insult.                                                           |
+| `joke()`          | none                                                           | Provides a joke.                                                                  |
+| `meme()`          | none                                                           | Provides random memes.                                                            |
+| `number()`        | none                                                           | Generates random numbers.                                                         |
+| `password()`      | length                                                         | Generates a random password of the provided length.                               |
+| `postToWebhook()` | webhookURL, username (optional), avatarURL (optional), message | Posts a message to the provided Discord Webhook URL. Webhook URLs are not stored. |
+| `quote()`         | none                                                           | Generates a random quote.                                                         |
+| `translate()`     | to, text                                                       | Translates the given text to the given language, defaults to english.             |
+| `word()`          | none                                                           | Generates a random word.                                                          |
 
 #### Text Manipulation:
 
