@@ -146,6 +146,22 @@ module.exports = {
   },
 
   /**
+   * pepeSign endpoint
+   * @param text: The text to draw over the sign
+   */
+  async pepeSign(text) {
+    return await (await this.request("pepeSign", `text=${text}`)).buffer();
+  },
+
+  /**
+   * shit endpoint
+   * @param image: The image to draw over the meme.
+   */
+  async shit(image) {
+    return await (await this.request("shit", `image=${image}`)).buffer();
+  },
+
+  /**
    * slap endpoint
    * @param image1: The image of the person slapping the other.
    * @param image2: The image of the person to slap.
@@ -156,6 +172,22 @@ module.exports = {
       `image1=${image1}&image2=${image2}`
     );
     return data.buffer();
+  },
+
+  /**
+   * snipe endpoint
+   * @param image: The image to snipe
+   */
+  async snipe(image) {
+    return await (await this.request("snipe", `image=${image}`)).buffer();
+  },
+
+  /**
+   * surprised endpoint
+   * @param text: The text to draw over the meme
+   */
+  async surprised(text) {
+    return await (await this.request("surprised", `text=${text}`)).buffer();
   },
 
   /**

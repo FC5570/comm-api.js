@@ -60,7 +60,11 @@ api.chatbot('hey').then(m => console.log(m)) // hello!
 | `captcha()`       | text               | Puts the provided text on a reCaptcha.                                             |
 | `delete()`        | image              | Deletes a given image.                                                             |
 | `greyscale()`     | image              | Applies the greyscale filter on the provided image.                                |
+| `pepeSign()`      | text               | Draws the provided text on a sign holded by a pepe.                                |
+| `shit()`          | image              | Draws the provided image on a "Ew I stepped in shit" meme.                         |
 | `slap()`          | image1, image2     | Slap someone, image1 is the person slapping, image2 is the person getting slapped. |
+| `snipe()`         | image              | Snipe someone.                                                                     |
+| `surprised()`     | text               | Draws the provided text on a surprised pikachu.                                    |
 | `woah()`          | text               | Puts the provided text on a "woah! thats worthless" meme.                          |
 | `wasted()`        | image              | Applies the GTA5 Wasted overlay on the image.                                      |
 
